@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Saturation problem · Magnetic Resonance Imaging</title><meta name="title" content="Saturation problem · Magnetic Resonance Imaging"/><meta property="og:title" content="Saturation problem · Magnetic Resonance Imaging"/><meta property="twitter:title" content="Saturation problem · Magnetic Resonance Imaging"/><meta name="description" content="Documentation for Magnetic Resonance Imaging."/><meta property="og:description" content="Documentation for Magnetic Resonance Imaging."/><meta property="twitter:description" content="Documentation for Magnetic Resonance Imaging."/><script data-outdated-warner src="assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.050/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="assets/documenter.js"></script><script src="search_index.js"></script><script src="siteinfo.js"></script><script src="../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-mocha.css" data-theme-name="catppuccin-mocha"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-macchiato.css" data-theme-name="catppuccin-macchiato"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-frappe.css" data-theme-name="catppuccin-frappe"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-latte.css" data-theme-name="catppuccin-latte"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="assets/themeswap.js"></script><link href="https://control-toolbox.org/assets/css/documentation.css" rel="stylesheet" type="text/css"/><script src="https://control-toolbox.org/assets/js/documentation.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><div class="docs-package-name"><span class="docs-autofit"><a href="index.html">Magnetic Resonance Imaging</a></span></div><button class="docs-search-query input is-rounded is-small is-clickable my-2 mx-auto py-1 px-2" id="documenter-search-query">Search docs (Ctrl + /)</button><ul class="docs-menu"><li><a class="tocitem" href="index.html">Introduction</a></li><li><a class="tocitem" href="bloch-equation.html">Bloch equation</a></li><li class="is-active"><a class="tocitem" href="saturation.html">Saturation problem</a><ul class="internal"><li><a class="tocitem" href="#Time-minimal-saturation-problem"><span>Time-minimal saturation problem</span></a></li><li><a class="tocitem" href="#Direct-method"><span>Direct method</span></a></li><li><a class="tocitem" href="#Indirect-method"><span>Indirect method</span></a></li></ul></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><a class="docs-sidebar-button docs-navbar-link fa-solid fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href="saturation.html">Saturation problem</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href="saturation.html">Saturation problem</a></li></ul></nav><div class="docs-right"><a class="docs-navbar-link" href="https://github.com/control-toolbox/MagneticResonanceImaging.jl" title="View the repository on GitHub"><span class="docs-icon fa-brands"></span><span class="docs-label is-hidden-touch">GitHub</span></a><a class="docs-navbar-link" href="https://github.com/control-toolbox/MagneticResonanceImaging.jl/blob/main/docs/src/saturation.md" title="Edit source on GitHub"><span class="docs-icon fa-solid"></span></a><a class="docs-settings-button docs-navbar-link fa-solid fa-gear" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-article-toggle-button fa-solid fa-chevron-up" id="documenter-article-toggle-button" href="javascript:;" title="Collapse all docstrings"></a></div></header><article class="content" id="documenter-page"><h1 id="mri-saturation"><a class="docs-heading-anchor" href="#mri-saturation">Saturation problem in Magnetic Resonance Imaging</a><a id="mri-saturation-1"></a><a class="docs-heading-anchor-permalink" href="#mri-saturation" title="Permalink"></a></h1><h2 id="Time-minimal-saturation-problem"><a class="docs-heading-anchor" href="#Time-minimal-saturation-problem">Time-minimal saturation problem</a><a id="Time-minimal-saturation-problem-1"></a><a class="docs-heading-anchor-permalink" href="#Time-minimal-saturation-problem" title="Permalink"></a></h2><p>The time-minimal saturation problem is the following: starting from the North pole of the  Bloch ball, the goal is to reach in minimum time the center of the Bloch ball, which  corresponds at the final time to zero magnetization of the spin.</p><div class="admonition is-info" id="Time-minimal-saturation-problem-8c776b10f14bd699"><header class="admonition-header">Time-minimal saturation problem<a class="admonition-anchor" href="#Time-minimal-saturation-problem-8c776b10f14bd699" title="Permalink"></a></header><div class="admonition-body"><p>We define the <em>time-minimal saturation problem</em> as the following optimal control  problem:</p><p class="math-container">\[    \inf t_f, 
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Saturation problem · Magnetic Resonance Imaging</title><meta name="title" content="Saturation problem · Magnetic Resonance Imaging"/><meta property="og:title" content="Saturation problem · Magnetic Resonance Imaging"/><meta property="twitter:title" content="Saturation problem · Magnetic Resonance Imaging"/><meta name="description" content="Documentation for Magnetic Resonance Imaging."/><meta property="og:description" content="Documentation for Magnetic Resonance Imaging."/><meta property="twitter:description" content="Documentation for Magnetic Resonance Imaging."/><script data-outdated-warner src="assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.050/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="assets/documenter.js"></script><script src="search_index.js"></script><script src="siteinfo.js"></script><script src="../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-mocha.css" data-theme-name="catppuccin-mocha"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-macchiato.css" data-theme-name="catppuccin-macchiato"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-frappe.css" data-theme-name="catppuccin-frappe"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-latte.css" data-theme-name="catppuccin-latte"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="assets/themeswap.js"></script><link href="https://control-toolbox.org/assets/css/documentation.css" rel="stylesheet" type="text/css"/><script src="https://control-toolbox.org/assets/js/documentation.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><div class="docs-package-name"><span class="docs-autofit"><a href="index.html">Magnetic Resonance Imaging</a></span></div><button class="docs-search-query input is-rounded is-small is-clickable my-2 mx-auto py-1 px-2" id="documenter-search-query">Search docs (Ctrl + /)</button><ul class="docs-menu"><li><a class="tocitem" href="index.html">Introduction</a></li><li><a class="tocitem" href="bloch-equation.html">Bloch equation</a></li><li class="is-active"><a class="tocitem" href="saturation.html">Saturation problem</a><ul class="internal"><li><a class="tocitem" href="#Time-minimal-saturation-problem"><span>Time-minimal saturation problem</span></a></li><li><a class="tocitem" href="#Direct-method"><span>Direct method</span></a></li><li><a class="tocitem" href="#Indirect-method"><span>Indirect method</span></a></li></ul></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><a class="docs-sidebar-button docs-navbar-link fa-solid fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href="saturation.html">Saturation problem</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href="saturation.html">Saturation problem</a></li></ul></nav><div class="docs-right"><a class="docs-navbar-link" href="https://github.com/control-toolbox/MagneticResonanceImaging.jl" title="View the repository on GitHub"><span class="docs-icon fa-brands"></span><span class="docs-label is-hidden-touch">GitHub</span></a><a class="docs-navbar-link" href="https://github.com/control-toolbox/MagneticResonanceImaging.jl/blob/main/docs/src/saturation.md" title="Edit source on GitHub"><span class="docs-icon fa-solid"></span></a><a class="docs-settings-button docs-navbar-link fa-solid fa-gear" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-article-toggle-button fa-solid fa-chevron-up" id="documenter-article-toggle-button" href="javascript:;" title="Collapse all docstrings"></a></div></header><article class="content" id="documenter-page"><h1 id="mri-saturation"><a class="docs-heading-anchor" href="#mri-saturation">Saturation problem in Magnetic Resonance Imaging</a><a id="mri-saturation-1"></a><a class="docs-heading-anchor-permalink" href="#mri-saturation" title="Permalink"></a></h1><h2 id="Time-minimal-saturation-problem"><a class="docs-heading-anchor" href="#Time-minimal-saturation-problem">Time-minimal saturation problem</a><a id="Time-minimal-saturation-problem-1"></a><a class="docs-heading-anchor-permalink" href="#Time-minimal-saturation-problem" title="Permalink"></a></h2><p>The time-minimal saturation problem is the following: starting from the North pole of the  Bloch ball, the goal is to reach in minimum time the center of the Bloch ball, which  corresponds at the final time to zero magnetization of the spin.</p><div class="admonition is-info" id="Time-minimal-saturation-problem-7832788185efd4e2"><header class="admonition-header">Time-minimal saturation problem<a class="admonition-anchor" href="#Time-minimal-saturation-problem-7832788185efd4e2" title="Permalink"></a></header><div class="admonition-body"><p>We define the <em>time-minimal saturation problem</em> as the following optimal control  problem:</p><p class="math-container">\[    \inf t_f, 
     \quad \text{s.t.} \quad u(\cdot) \in \mathcal{U}, \quad 
     t_f \ge 0 \quad \text{and} \quad q(t_f, N, u(\cdot)) = O,\]</p><p>where <span>$N = (0, 1)$</span> is the North pole, where <span>$O = (0,0)$</span> is the origin of the Bloch  ball and where <span>$t \mapsto q(t, q_0, u(\cdot))$</span>  is the unique maximal solution of the 2D control system <span>$\dot{q} = F_0(q) + u\, F_1(q)$</span>  associated to the control <span>$u(\cdot)$</span> and starting from the given initial condition <span>$q_0$</span>.</p></div></div><p>The <strong>inversion sequence</strong> <span>${\sigma_+} {\sigma_s^v}$</span>, that is a positive bang arc followed by a singular vertical arc with zero control, is the simplest way to go from <span>$N$</span> to <span>$O$</span>.  Is it optimal?</p><img src="./mri-resources/inversion_sequence.png" style="display: block; margin-left: auto; margin-right: auto;" width="500px">
-<br><p>We have the following symmetry.</p><p><strong>Proposition.</strong> Let <span>$(y(\cdot), z(\cdot))$</span>, with associated control <span>$u(\cdot)$</span>, be a  trajectory solution of <span>$\dot{q} = F_0(q) + u\, F_1(q)$</span>. Then, <span>$(-y(\cdot), z(\cdot))$</span> with control <span>$-u(\cdot)$</span> is also solution of this system.</p><p>This discrete symmetry allows us to consider only trajectories inside the domain  <span>$\{y \le 0\}$</span> of the Bloch ball.</p><p>In order to solve numerically the problem, we need to set the parameters.  We introduce the practical cases in the following table. We give the relaxation times with  the associated <span>$(\gamma, \Gamma)$</span> parameters for <span>$\omega_\mathrm{max} = 2 \pi\times 32.3$</span> Hz.  Note that in the experiments, <span>$\omega_\mathrm{max}$</span> may be chosen up to 15 000 Hz but we  consider the same value as in <sup class="footnote-reference"><a id="citeref-1" href="#footnote-1">[1]</a></sup>.</p><table><tr><th style="text-align: left"><strong>Name</strong></th><th style="text-align: left"><span>$T_1$</span></th><th style="text-align: left"><span>$T_2$</span></th><th style="text-align: left"><span>$\gamma$</span></th><th style="text-align: left"><span>$\Gamma$</span></th><th style="text-align: left"><span>$\delta=\gamma-\Gamma$</span></th></tr><tr><td style="text-align: left">Water</td><td style="text-align: left">2.5</td><td style="text-align: left">2.5</td><td style="text-align: left"><span>$1.9710e^{-03}$</span></td><td style="text-align: left"><span>$1.9710e^{-03}$</span></td><td style="text-align: left"><span>$0.0$</span></td></tr><tr><td style="text-align: left">Cerebrospinal Fluid</td><td style="text-align: left">2.0</td><td style="text-align: left">0.3</td><td style="text-align: left"><span>$2.4637e^{-03}$</span></td><td style="text-align: left"><span>$1.6425e^{-02}$</span></td><td style="text-align: left"><span>$-1.3961^{-02}$</span></td></tr><tr><td style="text-align: left">Deoxygenated blood</td><td style="text-align: left">1.35</td><td style="text-align: left">0.05</td><td style="text-align: left"><span>$3.6499e^{-03}$</span></td><td style="text-align: left"><span>$9.8548e^{-02}$</span></td><td style="text-align: left"><span>$-9.4898^{-02}$</span></td></tr><tr><td style="text-align: left">Oxygenated blood</td><td style="text-align: left">1.35</td><td style="text-align: left">0.2</td><td style="text-align: left"><span>$3.6499e^{-03}$</span></td><td style="text-align: left"><span>$2.4637e^{-02}$</span></td><td style="text-align: left"><span>$-2.0987^{-02}$</span></td></tr><tr><td style="text-align: left">Gray cerebral matter</td><td style="text-align: left">0.92</td><td style="text-align: left">0.1</td><td style="text-align: left"><span>$5.3559e^{-03}$</span></td><td style="text-align: left"><span>$4.9274e^{-02}$</span></td><td style="text-align: left"><span>$-4.3918^{-02}$</span></td></tr><tr><td style="text-align: left">White cerebral matter</td><td style="text-align: left">0.78</td><td style="text-align: left">0.09</td><td style="text-align: left"><span>$6.3172e^{-03}$</span></td><td style="text-align: left"><span>$5.4749e^{-02}$</span></td><td style="text-align: left"><span>$-4.8432^{-02}$</span></td></tr><tr><td style="text-align: left">Fat</td><td style="text-align: left">0.2</td><td style="text-align: left">0.1</td><td style="text-align: left"><span>$2.4637e^{-02}$</span></td><td style="text-align: left"><span>$4.9274e^{-02}$</span></td><td style="text-align: left"><span>$-2.4637^{-02}$</span></td></tr><tr><td style="text-align: left">Brain</td><td style="text-align: left">1.062</td><td style="text-align: left">0.052</td><td style="text-align: left"><span>$4.6397e^{-03}$</span></td><td style="text-align: left"><span>$9.4758e^{-02}$</span></td><td style="text-align: left"><span>$-9.0118^{-02}$</span></td></tr><tr><td style="text-align: left">Parietal muscle</td><td style="text-align: left">1.2</td><td style="text-align: left">0.029</td><td style="text-align: left"><span>$4.1062e^{-03}$</span></td><td style="text-align: left"><span>$1.6991e^{-01}$</span></td><td style="text-align: left"><span>$-1.6580^{-02}$</span></td></tr></table><p>Table: Matter name with associated relaxation times in seconds and relative <span>$(\gamma, \Gamma)$</span> parameters with <span>$\omega_\mathrm{max} = 2 \pi\times 32.3$</span> Hz and <span>$u_\mathrm{max} = 1$</span>.</p><div class="admonition is-info" id="Deoxygenated-blood-case-2b89bcd8da0a2109"><header class="admonition-header">Deoxygenated blood case<a class="admonition-anchor" href="#Deoxygenated-blood-case-2b89bcd8da0a2109" title="Permalink"></a></header><div class="admonition-body"><p>We consider the Deoxygenated blood case.  According to Theorem 3.6 from <sup class="footnote-reference"><a id="citeref-2" href="#footnote-2">[2]</a></sup> the optimal solution is of the form  Bang-Singular-Bang-Singular (BSBS). The two bang arcs are with control <span>$u=1$</span>.  The first singular arc is contained in the horizontal line <span>$z=\gamma/2\delta$</span> while the second singular arc is contained in the vertical line <span>$y=0$</span>.  We propose in the following to retrieve this result numerically.</p></div></div><p>Let us first define the parameters with the two vector fields <span>$F_0$</span> and <span>$F_1$</span>.</p><pre><code class="language-julia hljs">import OptimalControl: ⋅
+<br><p>We have the following symmetry.</p><p><strong>Proposition.</strong> Let <span>$(y(\cdot), z(\cdot))$</span>, with associated control <span>$u(\cdot)$</span>, be a  trajectory solution of <span>$\dot{q} = F_0(q) + u\, F_1(q)$</span>. Then, <span>$(-y(\cdot), z(\cdot))$</span> with control <span>$-u(\cdot)$</span> is also solution of this system.</p><p>This discrete symmetry allows us to consider only trajectories inside the domain  <span>$\{y \le 0\}$</span> of the Bloch ball.</p><p>In order to solve numerically the problem, we need to set the parameters.  We introduce the practical cases in the following table. We give the relaxation times with  the associated <span>$(\gamma, \Gamma)$</span> parameters for <span>$\omega_\mathrm{max} = 2 \pi\times 32.3$</span> Hz.  Note that in the experiments, <span>$\omega_\mathrm{max}$</span> may be chosen up to 15 000 Hz but we  consider the same value as in <sup class="footnote-reference"><a id="citeref-1" href="#footnote-1" class="footnote-ref">[1]</a><span class="footnote-preview" id="fn-1"></span></sup>.</p><table><tr><th style="text-align: left"><strong>Name</strong></th><th style="text-align: left"><span>$T_1$</span></th><th style="text-align: left"><span>$T_2$</span></th><th style="text-align: left"><span>$\gamma$</span></th><th style="text-align: left"><span>$\Gamma$</span></th><th style="text-align: left"><span>$\delta=\gamma-\Gamma$</span></th></tr><tr><td style="text-align: left">Water</td><td style="text-align: left">2.5</td><td style="text-align: left">2.5</td><td style="text-align: left"><span>$1.9710e^{-03}$</span></td><td style="text-align: left"><span>$1.9710e^{-03}$</span></td><td style="text-align: left"><span>$0.0$</span></td></tr><tr><td style="text-align: left">Cerebrospinal Fluid</td><td style="text-align: left">2.0</td><td style="text-align: left">0.3</td><td style="text-align: left"><span>$2.4637e^{-03}$</span></td><td style="text-align: left"><span>$1.6425e^{-02}$</span></td><td style="text-align: left"><span>$-1.3961^{-02}$</span></td></tr><tr><td style="text-align: left">Deoxygenated blood</td><td style="text-align: left">1.35</td><td style="text-align: left">0.05</td><td style="text-align: left"><span>$3.6499e^{-03}$</span></td><td style="text-align: left"><span>$9.8548e^{-02}$</span></td><td style="text-align: left"><span>$-9.4898^{-02}$</span></td></tr><tr><td style="text-align: left">Oxygenated blood</td><td style="text-align: left">1.35</td><td style="text-align: left">0.2</td><td style="text-align: left"><span>$3.6499e^{-03}$</span></td><td style="text-align: left"><span>$2.4637e^{-02}$</span></td><td style="text-align: left"><span>$-2.0987^{-02}$</span></td></tr><tr><td style="text-align: left">Gray cerebral matter</td><td style="text-align: left">0.92</td><td style="text-align: left">0.1</td><td style="text-align: left"><span>$5.3559e^{-03}$</span></td><td style="text-align: left"><span>$4.9274e^{-02}$</span></td><td style="text-align: left"><span>$-4.3918^{-02}$</span></td></tr><tr><td style="text-align: left">White cerebral matter</td><td style="text-align: left">0.78</td><td style="text-align: left">0.09</td><td style="text-align: left"><span>$6.3172e^{-03}$</span></td><td style="text-align: left"><span>$5.4749e^{-02}$</span></td><td style="text-align: left"><span>$-4.8432^{-02}$</span></td></tr><tr><td style="text-align: left">Fat</td><td style="text-align: left">0.2</td><td style="text-align: left">0.1</td><td style="text-align: left"><span>$2.4637e^{-02}$</span></td><td style="text-align: left"><span>$4.9274e^{-02}$</span></td><td style="text-align: left"><span>$-2.4637^{-02}$</span></td></tr><tr><td style="text-align: left">Brain</td><td style="text-align: left">1.062</td><td style="text-align: left">0.052</td><td style="text-align: left"><span>$4.6397e^{-03}$</span></td><td style="text-align: left"><span>$9.4758e^{-02}$</span></td><td style="text-align: left"><span>$-9.0118^{-02}$</span></td></tr><tr><td style="text-align: left">Parietal muscle</td><td style="text-align: left">1.2</td><td style="text-align: left">0.029</td><td style="text-align: left"><span>$4.1062e^{-03}$</span></td><td style="text-align: left"><span>$1.6991e^{-01}$</span></td><td style="text-align: left"><span>$-1.6580^{-02}$</span></td></tr></table><p>Table: Matter name with associated relaxation times in seconds and relative <span>$(\gamma, \Gamma)$</span> parameters with <span>$\omega_\mathrm{max} = 2 \pi\times 32.3$</span> Hz and <span>$u_\mathrm{max} = 1$</span>.</p><div class="admonition is-info" id="Deoxygenated-blood-case-ad35e7a36888adba"><header class="admonition-header">Deoxygenated blood case<a class="admonition-anchor" href="#Deoxygenated-blood-case-ad35e7a36888adba" title="Permalink"></a></header><div class="admonition-body"><p>We consider the Deoxygenated blood case.  According to Theorem 3.6 from <sup class="footnote-reference"><a id="citeref-2" href="#footnote-2" class="footnote-ref">[2]</a><span class="footnote-preview" id="fn-2"></span></sup> the optimal solution is of the form  Bang-Singular-Bang-Singular (BSBS). The two bang arcs are with control <span>$u=1$</span>.  The first singular arc is contained in the horizontal line <span>$z=\gamma/2\delta$</span> while the second singular arc is contained in the vertical line <span>$y=0$</span>.  We propose in the following to retrieve this result numerically.</p></div></div><p>Let us first define the parameters with the two vector fields <span>$F_0$</span> and <span>$F_1$</span>.</p><pre><code class="language-julia hljs">import OptimalControl: ⋅
 ⋅(a::Number, b::Number) = a*b
 
 # Blood case
@@ -47,18 +47,16 @@ sol = solve(
     ocp;
     grid_size=N,
     init=(state=[-0.5, 0.0], ),
-    disc_method=:gauss_legendre_2,
+    scheme=:gauss_legendre_2,
     print_level=4
-)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">▫ This is OptimalControl version v1.1.6 running with: direct, adnlp, ipopt.
+)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">▫ This is OptimalControl 2.0.0, solving with: <span class="sgr36"><span class="sgr1">collocation</span></span> → <span class="sgr36"><span class="sgr1">adnlp</span></span> → <span class="sgr36"><span class="sgr1">ipopt</span></span> (<span class="sgr35"><span class="sgr1">cpu</span></span>)
 
-▫ The optimal control problem is solved with CTDirect version v0.17.4.
+  📦 Configuration:
+   ├─ <span class="sgr1">Discretizer</span>: <span class="sgr36"><span class="sgr1">collocation</span></span> (grid_size = 100, scheme = gauss_legendre_2)
+   ├─ <span class="sgr1">Modeler</span>: <span class="sgr36"><span class="sgr1">adnlp</span></span>
+   └─ <span class="sgr1">Solver</span>: <span class="sgr36"><span class="sgr1">ipopt</span></span> (print_level = 4)
 
-   ┌─ The NLP is modelled with ADNLPModels and solved with NLPModelsIpopt.
-   │
-   ├─ Number of time steps⋅: 100
-   └─ Discretisation scheme: gauss_legendre_2
-
-Total number of variables............................:      703
+▫ Total number of variables............................:      703
                      variables with only lower bounds:        1
                 variables with lower and upper bounds:      100
                      variables with only upper bounds:      101
@@ -69,45 +67,43 @@ Total number of inequality constraints...............:        0
         inequality constraints with only upper bounds:        0
 
 
-Number of Iterations....: 143
+Number of Iterations....: 94
 
                                    (scaled)                 (unscaled)
-Objective...............:   4.2714529345077786e+01    4.2714529345077786e+01
-Dual infeasibility......:   7.2743894241611429e-13    7.2743894241611429e-13
-Constraint violation....:   1.1102230246251565e-16    1.1102230246251565e-16
-Variable bound violation:   9.9751860105357082e-09    9.9751860105357082e-09
-Complementarity.........:   1.0000006641016691e-11    1.0000006641016691e-11
-Overall NLP error.......:   1.0000006641016691e-11    1.0000006641016691e-11
+Objective...............:   4.2714529345077779e+01    4.2714529345077779e+01
+Dual infeasibility......:   8.7396756498492323e-13    8.7396756498492323e-13
+Constraint violation....:   1.8041124150158794e-16    1.8041124150158794e-16
+Variable bound violation:   9.9751837900896589e-09    9.9751837900896589e-09
+Complementarity.........:   1.0000895798715887e-11    1.0000895798715887e-11
+Overall NLP error.......:   1.0000895798715887e-11    1.0000895798715887e-11
 
 
-Number of objective function evaluations             = 209
-Number of objective gradient evaluations             = 133
-Number of equality constraint evaluations            = 209
+Number of objective function evaluations             = 98
+Number of objective gradient evaluations             = 95
+Number of equality constraint evaluations            = 98
 Number of inequality constraint evaluations          = 0
-Number of equality constraint Jacobian evaluations   = 149
+Number of equality constraint Jacobian evaluations   = 95
 Number of inequality constraint Jacobian evaluations = 0
-Number of Lagrangian Hessian evaluations             = 143
-Total seconds in IPOPT                               = 7.851
+Number of Lagrangian Hessian evaluations             = 94
+Total seconds in IPOPT                               = 7.928
 
 EXIT: Optimal Solution Found.</code></pre><p>Then, we plot the solution thanks to Plots.</p><pre><code class="language-julia hljs">using Plots
-plt = plot(sol; size=(700, 500), label=&quot;N = &quot;*string(N))</code></pre><img src="saturation-06a8dd08.svg" alt="Example block output"/><p>This rough approximation is then refine on a finer grid of 1000 points. This two steps resolution increases the speed of convergence. Note that we provide the previous solution as initialisation.</p><pre><code class="language-julia hljs">N = 1000
+plt = plot(sol; size=(700, 500), label=&quot;N = &quot;*string(N))</code></pre><img src="saturation-720aaae2.svg" alt="Example block output"/><p>This rough approximation is then refine on a finer grid of 1000 points. This two steps resolution increases the speed of convergence. Note that we provide the previous solution as initialisation.</p><pre><code class="language-julia hljs">N = 1000
 direct_sol = solve(
     ocp;
     grid_size=N,
     init=sol,
-    disc_method=:gauss_legendre_2,
+    scheme=:gauss_legendre_2,
     print_level=4,
     tol=1e-12
-)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">▫ This is OptimalControl version v1.1.6 running with: direct, adnlp, ipopt.
+)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">▫ This is OptimalControl 2.0.0, solving with: <span class="sgr36"><span class="sgr1">collocation</span></span> → <span class="sgr36"><span class="sgr1">adnlp</span></span> → <span class="sgr36"><span class="sgr1">ipopt</span></span> (<span class="sgr35"><span class="sgr1">cpu</span></span>)
 
-▫ The optimal control problem is solved with CTDirect version v0.17.4.
+  📦 Configuration:
+   ├─ <span class="sgr1">Discretizer</span>: <span class="sgr36"><span class="sgr1">collocation</span></span> (grid_size = 1000, scheme = gauss_legendre_2)
+   ├─ <span class="sgr1">Modeler</span>: <span class="sgr36"><span class="sgr1">adnlp</span></span>
+   └─ <span class="sgr1">Solver</span>: <span class="sgr36"><span class="sgr1">ipopt</span></span> (print_level = 4, tol = 1.0e-12)
 
-   ┌─ The NLP is modelled with ADNLPModels and solved with NLPModelsIpopt.
-   │
-   ├─ Number of time steps⋅: 1000
-   └─ Discretisation scheme: gauss_legendre_2
-
-Total number of variables............................:     7003
+▫ Total number of variables............................:     7003
                      variables with only lower bounds:        1
                 variables with lower and upper bounds:     1000
                      variables with only upper bounds:     1001
@@ -118,27 +114,27 @@ Total number of inequality constraints...............:        0
         inequality constraints with only upper bounds:        0
 
 
-Number of Iterations....: 55
+Number of Iterations....: 43
 
                                    (scaled)                 (unscaled)
-Objective...............:   4.2713711084173745e+01    4.2713711084173745e+01
-Dual infeasibility......:   9.6456176379433600e-13    9.6456176379433600e-13
-Constraint violation....:   2.7755575615628914e-16    2.7755575615628914e-16
+Objective...............:   4.2713711084173731e+01    4.2713711084173731e+01
+Dual infeasibility......:   4.4660455889022899e-13    4.4660455889022899e-13
+Constraint violation....:   1.3569874390828573e-15    1.3569874390828573e-15
 Variable bound violation:   9.9883199489170238e-09    9.9883199489170238e-09
-Complementarity.........:   5.0000406364690906e-13    5.0000406364690906e-13
-Overall NLP error.......:   9.6456176379433600e-13    9.6456176379433600e-13
+Complementarity.........:   5.0000406364691309e-13    5.0000406364691309e-13
+Overall NLP error.......:   5.0000406364691309e-13    5.0000406364691309e-13
 
 
-Number of objective function evaluations             = 79
-Number of objective gradient evaluations             = 56
-Number of equality constraint evaluations            = 79
+Number of objective function evaluations             = 47
+Number of objective gradient evaluations             = 44
+Number of equality constraint evaluations            = 47
 Number of inequality constraint evaluations          = 0
-Number of equality constraint Jacobian evaluations   = 57
+Number of equality constraint Jacobian evaluations   = 44
 Number of inequality constraint Jacobian evaluations = 0
-Number of Lagrangian Hessian evaluations             = 55
-Total seconds in IPOPT                               = 3.452
+Number of Lagrangian Hessian evaluations             = 43
+Total seconds in IPOPT                               = 2.862
 
-EXIT: Optimal Solution Found.</code></pre><p>We can compare both solutions. The BSBS structure is revealed even if the second bang arc is not clearly demonstrated.</p><pre><code class="language-julia hljs">plot!(plt, direct_sol; label=&quot;N = &quot;*string(N), color=2)</code></pre><img src="saturation-da2a5b5e.svg" alt="Example block output"/><div class="admonition is-info" id="Code-for-plotting-in-the-Bloch-ball-62e42b27420c2159"><header class="admonition-header">Code for plotting in the Bloch ball<a class="admonition-anchor" href="#Code-for-plotting-in-the-Bloch-ball-62e42b27420c2159" title="Permalink"></a></header><div class="admonition-body"><p>We define a custom plot function for plotting the solution inside the Bloch ball.</p><details><summary>Click to unfold and get the code of the custom plot function.</summary><pre><code class="language-julia hljs">using Plots.PlotMeasures
+EXIT: Optimal Solution Found.</code></pre><p>We can compare both solutions. The BSBS structure is revealed even if the second bang arc is not clearly demonstrated.</p><pre><code class="language-julia hljs">plot!(plt, direct_sol; label=&quot;N = &quot;*string(N), color=2)</code></pre><img src="saturation-adf425db.svg" alt="Example block output"/><div class="admonition is-info" id="Code-for-plotting-in-the-Bloch-ball-84fd8765b008b0b6"><header class="admonition-header">Code for plotting in the Bloch ball<a class="admonition-anchor" href="#Code-for-plotting-in-the-Bloch-ball-84fd8765b008b0b6" title="Permalink"></a></header><div class="admonition-body"><p>We define a custom plot function for plotting the solution inside the Bloch ball.</p><details><summary>Click to unfold and get the code of the custom plot function.</summary><pre><code class="language-julia hljs">using Plots.PlotMeasures
 function spin_plot(sol; kwargs...)
 
     y2 = cos(asin(zs))
@@ -179,7 +175,7 @@ function spin_plot(sol; kwargs...)
 
     return plot(state_plt, control_plt; layout=(1, 2), leftmargin=15px, bottommargin=15px, kwargs...)
 
-end</code></pre></details></div></div><p>Below, we plot the solution inside the Bloch ball. The first bang arc drives the trajectory to the horizontal singular line <span>$z = \gamma / (2\delta)$</span>, shown as a dashed line. The second bang arc is very short, which makes it difficult to capture accurately unless the grid is sufficiently fine. In the next section, we introduce an indirect method to refine this approximation.</p><pre><code class="language-julia hljs">spin_plot(direct_sol; size=(800, 400))</code></pre><img src="saturation-7fbcd5aa.svg" alt="Example block output"/><p>To make the indirect method converge we need a good initial guess. We extract below the useful information from the direct solution to provide an initial guess for the indirect method. We need the initial costate together with the switching times between bang and singular arcs and the final time.</p><pre><code class="language-julia hljs">t  = time_grid(direct_sol)
+end</code></pre></details></div></div><p>Below, we plot the solution inside the Bloch ball. The first bang arc drives the trajectory to the horizontal singular line <span>$z = \gamma / (2\delta)$</span>, shown as a dashed line. The second bang arc is very short, which makes it difficult to capture accurately unless the grid is sufficiently fine. In the next section, we introduce an indirect method to refine this approximation.</p><pre><code class="language-julia hljs">spin_plot(direct_sol; size=(800, 400))</code></pre><img src="saturation-3ec79d17.svg" alt="Example block output"/><p>To make the indirect method converge we need a good initial guess. We extract below the useful information from the direct solution to provide an initial guess for the indirect method. We need the initial costate together with the switching times between bang and singular arcs and the final time.</p><pre><code class="language-julia hljs">t  = time_grid(direct_sol)
 q  = state(direct_sol)
 p  = costate(direct_sol)
 u  = control(direct_sol)
@@ -202,12 +198,12 @@ println(&quot;pz0 = &quot;, pz0)
 println(&quot;t1 = &quot;, t1)
 println(&quot;t2 = &quot;, t2)
 println(&quot;t3 = &quot;, t3)
-println(&quot;tf = &quot;, tf)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">pz0 = -10.138145104720211
-t1 = 1.6231210211986022
-t2 = 37.118214932146984
-t3 = 37.545352042988725
-tf = 42.713711084173745</code></pre><h2 id="Indirect-method"><a class="docs-heading-anchor" href="#Indirect-method">Indirect method</a><a id="Indirect-method-1"></a><a class="docs-heading-anchor-permalink" href="#Indirect-method" title="Permalink"></a></h2><p>We introduce the pseudo-Hamiltonian</p><p class="math-container">\[H(q, p, u) = H_0(q, p) + u\, H_1(q, p)\]</p><p>where <span>$H_0(q, p) = p \cdot F_0(q)$</span> and <span>$H_1(q, p) = p \cdot F_1(q)$</span> are both Hamiltonian lifts. According to the maximisation condition from the <a href="https://en.wikipedia.org/wiki/Pontryagin%27s_maximum_principle">Pontryagin Maximum Principle</a> (PMP), a bang arc occurs when <span>$H_1$</span> is nonzero and of constant sign along the arc. On the contrary the singular arcs are contained in <span>$H_1 = 0$</span>. If  <span>$t \mapsto H_1(q(t), p(t)) = 0$</span> along an arc then its derivative is also zero. Thus, along a singular arc we have also</p><p class="math-container">\[\frac{\mathrm{d}}{\mathrm{d}t} H_1(q(t), p(t)) = 
-\{H_0, H_1\}(q(t), p(t)) = 0,\]</p><p>where <span>$\{H_0, H_1\}$</span> is the Poisson bracket of <span>$H_0$</span> and <span>$H_1$</span>.</p><div class="admonition is-info" id="Lie-and-Poisson-brackets-3e8b7ceb19eced"><header class="admonition-header">Lie and Poisson brackets<a class="admonition-anchor" href="#Lie-and-Poisson-brackets-3e8b7ceb19eced" title="Permalink"></a></header><div class="admonition-body"><p>Let <span>$F_0$</span>, <span>$F_1$</span> be two smooth vector fields on a smooth manifold <span>$M$</span> and <span>$f$</span> a smooth function on <span>$M$</span>. Let <span>$x$</span> be local coordinates. The <em>Lie bracket</em> of <span>$F_0$</span> and <span>$F_1$</span> is given by </p><p class="math-container">\[    [F_0,F_1] \coloneqq  F_0 \cdot F_1 - F_1 \cdot F_0,\]</p><p>with <span>$(F_0 \cdot F_1)(x) = \mathrm{d} F_1(x) \cdot F_0(x)$</span>. The <em>Lie derivative</em> <span>$\mathcal{L}_{F_0} f$</span> of <span>$f$</span> along <span>$F_0$</span> is simply written <span>$F_0\cdot f$</span>. Denoting <span>$H_0$</span>, <span>$H_1$</span> the Hamiltonian lifts of <span>$F_0$</span>, <span>$F_1$</span>, then the <em>Poisson bracket</em> of <span>$H_0$</span> and <span>$H_1$</span> is</p><p class="math-container">\[    \{H_0,H_1\}  \coloneqq  \vec{H_0} \cdot H_1.\]</p><p>We also use the notation <span>$H_{01}$</span> (resp. <span>$F_{01}$</span>) to write the bracket <span>$\{H_0,H_1\}$</span> (resp. <span>$[F_0,F_1]$</span>) and so forth. Besides, since <span>$H_0$</span>, <span>$H_1$</span> are Hamiltonian lifts, we have <span>$\{H_0,H_1\}= p \cdot [F_0,F_1]$</span>.</p></div></div><div class="admonition is-info" id="Code-for-plotting-the-switching-function-and-its-derivative-621ab70bd8b22c14"><header class="admonition-header">Code for plotting the switching function and its derivative<a class="admonition-anchor" href="#Code-for-plotting-the-switching-function-and-its-derivative-621ab70bd8b22c14" title="Permalink"></a></header><div class="admonition-body"><p>We define a function for plotting the switching function <span>$t \mapsto H_1(q(t), p(t))$</span> and its derivative along the solution computed by the direct method.</p><details><summary>Click to unfold and get the code of the function.</summary><pre><code class="language-julia hljs">function switching_plot(sol, H1, H01; kwargs...)
+println(&quot;tf = &quot;, tf)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">pz0 = -10.138145104720296
+t1 = 1.6231210211986018
+t2 = 37.11821493214697
+t3 = 37.54535204298871
+tf = 42.71371108417373</code></pre><h2 id="Indirect-method"><a class="docs-heading-anchor" href="#Indirect-method">Indirect method</a><a id="Indirect-method-1"></a><a class="docs-heading-anchor-permalink" href="#Indirect-method" title="Permalink"></a></h2><p>We introduce the pseudo-Hamiltonian</p><p class="math-container">\[H(q, p, u) = H_0(q, p) + u\, H_1(q, p)\]</p><p>where <span>$H_0(q, p) = p \cdot F_0(q)$</span> and <span>$H_1(q, p) = p \cdot F_1(q)$</span> are both Hamiltonian lifts. According to the maximisation condition from the <a href="https://en.wikipedia.org/wiki/Pontryagin%27s_maximum_principle">Pontryagin Maximum Principle</a> (PMP), a bang arc occurs when <span>$H_1$</span> is nonzero and of constant sign along the arc. On the contrary the singular arcs are contained in <span>$H_1 = 0$</span>. If  <span>$t \mapsto H_1(q(t), p(t)) = 0$</span> along an arc then its derivative is also zero. Thus, along a singular arc we have also</p><p class="math-container">\[\frac{\mathrm{d}}{\mathrm{d}t} H_1(q(t), p(t)) = 
+\{H_0, H_1\}(q(t), p(t)) = 0,\]</p><p>where <span>$\{H_0, H_1\}$</span> is the Poisson bracket of <span>$H_0$</span> and <span>$H_1$</span>.</p><div class="admonition is-info" id="Lie-and-Poisson-brackets-560b313308dda501"><header class="admonition-header">Lie and Poisson brackets<a class="admonition-anchor" href="#Lie-and-Poisson-brackets-560b313308dda501" title="Permalink"></a></header><div class="admonition-body"><p>Let <span>$F_0$</span>, <span>$F_1$</span> be two smooth vector fields on a smooth manifold <span>$M$</span> and <span>$f$</span> a smooth function on <span>$M$</span>. Let <span>$x$</span> be local coordinates. The <em>Lie bracket</em> of <span>$F_0$</span> and <span>$F_1$</span> is given by </p><p class="math-container">\[    [F_0,F_1] \coloneqq  F_0 \cdot F_1 - F_1 \cdot F_0,\]</p><p>with <span>$(F_0 \cdot F_1)(x) = \mathrm{d} F_1(x) \cdot F_0(x)$</span>. The <em>Lie derivative</em> <span>$\mathcal{L}_{F_0} f$</span> of <span>$f$</span> along <span>$F_0$</span> is simply written <span>$F_0\cdot f$</span>. Denoting <span>$H_0$</span>, <span>$H_1$</span> the Hamiltonian lifts of <span>$F_0$</span>, <span>$F_1$</span>, then the <em>Poisson bracket</em> of <span>$H_0$</span> and <span>$H_1$</span> is</p><p class="math-container">\[    \{H_0,H_1\}  \coloneqq  \vec{H_0} \cdot H_1.\]</p><p>We also use the notation <span>$H_{01}$</span> (resp. <span>$F_{01}$</span>) to write the bracket <span>$\{H_0,H_1\}$</span> (resp. <span>$[F_0,F_1]$</span>) and so forth. Besides, since <span>$H_0$</span>, <span>$H_1$</span> are Hamiltonian lifts, we have <span>$\{H_0,H_1\}= p \cdot [F_0,F_1]$</span>.</p></div></div><div class="admonition is-info" id="Code-for-plotting-the-switching-function-and-its-derivative-42efd23e32a5d9ad"><header class="admonition-header">Code for plotting the switching function and its derivative<a class="admonition-anchor" href="#Code-for-plotting-the-switching-function-and-its-derivative-42efd23e32a5d9ad" title="Permalink"></a></header><div class="admonition-body"><p>We define a function for plotting the switching function <span>$t \mapsto H_1(q(t), p(t))$</span> and its derivative along the solution computed by the direct method.</p><details><summary>Click to unfold and get the code of the function.</summary><pre><code class="language-julia hljs">function switching_plot(sol, H1, H01; kwargs...)
 
     t  = time_grid(sol)
     u  = control(sol)
@@ -247,7 +243,7 @@ end</code></pre></details></div></div><p>We can notice on the plots below that m
 H1 = Lift(q -&gt; F1(q...))
 H01  = @Lie { H0, H1 }
 
-switching_plot(direct_sol, H1, H01; size=(700, 800))</code></pre><img src="saturation-69eeffe3.svg" alt="Example block output"/><p>We aim to compute a better approximation of the solution thanks to indirect shooting. To do so, we need to define the three different flows associated to the three different  control laws in feedback form: bang control, singular control along the horizontal line and singular control along the vertical line. </p><div class="admonition is-info" id="Note-7eb04a3bb9d48c15"><header class="admonition-header">Note<a class="admonition-anchor" href="#Note-7eb04a3bb9d48c15" title="Permalink"></a></header><div class="admonition-body"><p>Let us recall that <span>$\delta = \gamma - \Gamma$</span>. Then, for any <span>$q = (y,z)$</span> we have:</p><p class="math-container">\[    \begin{aligned}
+switching_plot(direct_sol, H1, H01; size=(700, 800))</code></pre><img src="saturation-689bbb08.svg" alt="Example block output"/><p>We aim to compute a better approximation of the solution thanks to indirect shooting. To do so, we need to define the three different flows associated to the three different  control laws in feedback form: bang control, singular control along the horizontal line and singular control along the vertical line. </p><div class="admonition is-info" id="Note-cac04751eb3166d6"><header class="admonition-header">Note<a class="admonition-anchor" href="#Note-cac04751eb3166d6" title="Permalink"></a></header><div class="admonition-body"><p>Let us recall that <span>$\delta = \gamma - \Gamma$</span>. Then, for any <span>$q = (y,z)$</span> we have:</p><p class="math-container">\[    \begin{aligned}
         F_{01}(q) &amp;= 
         -(\gamma - \delta z) \frac{\partial}{\partial y} + 
         \delta y \frac{\partial}{\partial z}, \\[0.5em]
@@ -303,7 +299,7 @@ using LinearAlgebra: norm
 s = similar([pz0], 17)
 shoot!(s, pz0, t1, t2, t3, tf, q1, p1, q2, p2, q3, p3)
 
-println(&quot;Norm of the shooting function: ‖s‖ = &quot;, norm(s), &quot;\n&quot;)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Norm of the shooting function: ‖s‖ = 18.36155510048353</code></pre><p>We can use the <a href="https://github.com/sglyon/MINPACK.jl">MINPACK.jl</a> package to solve the shooting equation. To compute the Jacobian of the shooting function we use the <a href="https://juliadiff.org/DifferentiationInterface.jl/DifferentiationInterface">DifferentiationInterface.jl</a> package with <a href="https://juliadiff.org/ForwardDiff.jl">ForwardDiff.jl</a> backend.</p><pre><code class="language-julia hljs">using DifferentiationInterface
+println(&quot;Norm of the shooting function: ‖s‖ = &quot;, norm(s), &quot;\n&quot;)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Norm of the shooting function: ‖s‖ = 18.361555101622823</code></pre><p>We can use the <a href="https://github.com/sglyon/MINPACK.jl">MINPACK.jl</a> package to solve the shooting equation. To compute the Jacobian of the shooting function we use the <a href="https://juliadiff.org/DifferentiationInterface.jl/DifferentiationInterface">DifferentiationInterface.jl</a> package with <a href="https://juliadiff.org/ForwardDiff.jl">ForwardDiff.jl</a> backend.</p><pre><code class="language-julia hljs">using DifferentiationInterface
 import ForwardDiff
 backend = AutoForwardDiff()</code></pre><p>Let us define the problem to solve.</p><pre><code class="language-julia hljs"># auxiliary function with aggregated inputs
 shoot!(s, ξ) = shoot!(s, ξ[1], ξ[2:5]..., ξ[6:7], ξ[8:9],
@@ -342,117 +338,117 @@ s = similar([pz0], 17)
 shoot!(s, pz0, t1, t2, t3, tf, q1, p1, q2, p2, q3, p3)
 println(&quot;Norm of the shooting function: ‖s‖ = &quot;, norm(s), &quot;\n&quot;)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Iter     f(x) inf-norm    Step 2-norm      Step time
 ------   --------------   --------------   --------------
-     1     1.729122e+01     0.000000e+00         0.263550
-     2     9.461468e-01     3.704268e+01        13.567389
-     3     2.839417e-01     7.649105e+00         0.004600
-     4     2.196746e-01     6.189414e+00         0.004557
-     5     4.899687e-02     1.555075e+01         0.004485
-     6     1.317601e-01     6.220299e+01         0.004455
-     7     3.647552e-01     1.399561e+02         0.004539
-     8     4.266673e-02     3.889313e+00         0.059090
-     9     1.862372e-01     1.555075e+01         0.004577
-    10     3.906691e-02     3.889347e+00         0.004518
-    11     6.814071e-02     3.887687e+00         0.004548
-    12     1.408918e-02     9.722099e-01         0.004496
-    13     4.460910e-02     3.887687e+00         0.004573
-    14     9.719317e-03     9.720021e-01         0.004535
-    15     4.894523e-02     3.887687e+00         0.004574
-    16     1.037975e-02     9.720452e-01         0.004647
-    17     1.722110e-02     9.719218e-01         0.004574
-    18     3.374491e-03     2.429959e-01         0.004560
-    19     1.050803e-02     9.719218e-01         0.004589
-    20     2.514214e-03     2.429847e-01         0.005349
-    21     1.236260e-02     9.719218e-01         0.006584
-    22     2.699892e-03     2.429877e-01         0.006677
-    23     4.405108e-03     2.429804e-01         0.006502
-    24     1.140801e-03     6.074605e-02         0.006442
-    25     2.529561e-03     2.429804e-01         0.023860
-    26     8.971382e-04     6.074537e-02         0.004545
-    27     3.105367e-03     2.429804e-01         0.004615
-    28     6.886897e-04     6.074555e-02         0.004508
-    29     1.114999e-03     6.074511e-02         0.004543
-    30     5.937321e-04     1.518634e-02         0.004523
-    31     6.886842e-04     6.074511e-02         0.004593
-    32     5.243157e-04     1.518629e-02         0.004709
-    33     7.780882e-04     6.074511e-02         0.004602
-    34     4.570424e-04     1.518630e-02         0.004562
-    35     7.861590e-04     6.074511e-02         0.004601
-    36     3.925009e-04     1.518631e-02         0.004510
-    37     7.834904e-04     6.074511e-02         0.004554
-    38     3.308893e-04     1.518631e-02         0.004698
-    39     7.850448e-04     6.074511e-02         0.005215
-    40     2.723456e-04     1.518631e-02         0.006477
-    41     7.867550e-04     6.074511e-02         0.015723
-    42     2.170459e-04     1.518631e-02         0.004579
-    43     7.883591e-04     6.074511e-02         0.004577
-    44     1.793299e-04     1.518631e-02         0.004686
-    45     7.899762e-04     6.074511e-02         0.004572
-    46     1.787759e-04     1.518631e-02         0.004670
-    47     2.839177e-04     1.518628e-02         0.004516
-    48     1.589777e-04     3.796573e-03         0.004550
-    49     1.503008e-04     1.518628e-02         0.004571
-    50     1.506639e-04     3.796570e-03         0.004567
-    51     1.968768e-04     1.518628e-02         0.004610
-    52     1.424838e-04     3.796571e-03         0.004626
-    53     1.995271e-04     1.518628e-02         0.004595
-    54     1.342526e-04     3.796571e-03         0.004667
-    55     1.981819e-04     1.518628e-02         0.012541
-    56     1.259568e-04     3.796571e-03         0.004633
-    57     1.983571e-04     1.518628e-02         0.004565
-    58     1.175940e-04     3.796571e-03         0.004558
-    59     1.986120e-04     1.518628e-02         0.004549
-    60     1.091543e-04     3.796571e-03         0.004800
-    61     1.988165e-04     1.518628e-02         0.004565
-    62     1.006264e-04     3.796571e-03         0.004615
-    63     1.990215e-04     1.518628e-02         0.004612
-    64     9.199661e-05     3.796571e-03         0.004572
-    65     7.942206e-05     3.796569e-03         0.004579
-    66     8.723075e-05     9.491426e-04         0.011416
-    67     7.506888e-05     3.796569e-03         0.004505
-    68     1.671472e-04     1.518628e-02         0.004506
-    69     6.666612e-05     3.796571e-03         0.004574
-    70     6.134116e-05     9.491423e-04         0.029456
-    71     4.993156e-05     3.796569e-03         0.004608
-    72     5.647321e-05     9.491424e-04         0.004530
-    73     4.774483e-05     3.796569e-03         0.004529
-    74     5.160140e-05     9.491424e-04         0.004654
-    75     4.774429e-05     3.796569e-03         0.004523
-    76     4.672439e-05     9.491424e-04         0.004569
-    77     4.776050e-05     3.796569e-03         0.004616
-    78     4.183994e-05     9.491424e-04         0.004551
-    79     4.777702e-05     3.796569e-03         0.004612
-    80     3.694529e-05     9.491424e-04         0.004535
-    81     4.779396e-05     3.796569e-03         0.011472
-    82     3.203693e-05     9.491424e-04         0.004522
-    83     4.781135e-05     3.796569e-03         0.004583
-    84     2.711017e-05     9.491424e-04         0.004575
-    85     4.782922e-05     3.796569e-03         0.004544
-    86     2.215861e-05     9.491424e-04         0.004503
-    87     4.784748e-05     3.796569e-03         0.004518
-    88     1.717278e-05     9.491424e-04         0.004553
-    89     4.786617e-05     3.796569e-03         0.004550
-    90     1.213744e-05     9.491424e-04         0.004546
-    91     4.788528e-05     3.796569e-03         0.004602
-    92     8.099733e-06     9.491424e-04         0.011011
-    93     2.324556e-05     1.548720e-03         0.004526
-    94     2.321022e-06     7.302766e-05         0.004512
-    95     2.874309e-06     7.491451e-05         0.004524
-    96     1.820500e-08     1.764248e-10         0.004517
-    97     4.598817e-09     9.549517e-12         0.004513
-    98     3.929525e-12     3.584306e-13         0.004555
-pz0 = -10.103027162172827
-t1 = 1.6450509469600774
-t2 = 37.32398128558159
-t3 = 37.580773578617254
+     1     1.729122e+01     0.000000e+00         0.257782
+     2     9.461468e-01     3.704268e+01        11.116600
+     3     2.839417e-01     7.649105e+00         0.004551
+     4     2.196746e-01     6.189414e+00         0.004537
+     5     4.899687e-02     1.555075e+01         0.004628
+     6     1.317601e-01     6.220299e+01         0.004467
+     7     3.647552e-01     1.399561e+02         0.004489
+     8     4.266673e-02     3.889313e+00         0.076011
+     9     1.862372e-01     1.555075e+01         0.004521
+    10     3.906691e-02     3.889347e+00         0.004490
+    11     6.814071e-02     3.887687e+00         0.004435
+    12     1.408918e-02     9.722099e-01         0.004535
+    13     4.460910e-02     3.887687e+00         0.004524
+    14     9.719317e-03     9.720021e-01         0.004481
+    15     4.894523e-02     3.887687e+00         0.004517
+    16     1.037975e-02     9.720452e-01         0.004473
+    17     1.722110e-02     9.719218e-01         0.004614
+    18     3.374491e-03     2.429959e-01         0.004561
+    19     1.050803e-02     9.719218e-01         0.004611
+    20     2.514214e-03     2.429847e-01         0.004553
+    21     1.236260e-02     9.719218e-01         0.004612
+    22     2.699892e-03     2.429877e-01         0.005093
+    23     4.405108e-03     2.429804e-01         0.006474
+    24     1.140801e-03     6.074605e-02         0.006511
+    25     2.529561e-03     2.429804e-01         0.006649
+    26     8.971382e-04     6.074537e-02         0.006585
+    27     3.105367e-03     2.429804e-01         0.006579
+    28     6.886897e-04     6.074555e-02         0.006460
+    29     1.114999e-03     6.074511e-02         0.006579
+    30     5.937321e-04     1.518634e-02         0.006495
+    31     6.886842e-04     6.074511e-02         0.028411
+    32     5.243157e-04     1.518629e-02         0.004528
+    33     7.780882e-04     6.074511e-02         0.004555
+    34     4.570424e-04     1.518630e-02         0.004544
+    35     7.861591e-04     6.074511e-02         0.004607
+    36     3.925009e-04     1.518631e-02         0.004597
+    37     7.834904e-04     6.074511e-02         0.004638
+    38     3.308893e-04     1.518631e-02         0.004547
+    39     7.850448e-04     6.074511e-02         0.004613
+    40     2.723456e-04     1.518631e-02         0.004500
+    41     7.867551e-04     6.074511e-02         0.004589
+    42     2.170459e-04     1.518631e-02         0.004499
+    43     7.883591e-04     6.074511e-02         0.004523
+    44     1.793299e-04     1.518631e-02         0.004537
+    45     7.899762e-04     6.074511e-02         0.005185
+    46     1.787759e-04     1.518631e-02         0.006612
+    47     2.839177e-04     1.518628e-02         0.006461
+    48     1.589777e-04     3.796573e-03         0.006482
+    49     1.503008e-04     1.518628e-02         0.006559
+    50     1.506639e-04     3.796570e-03         0.019264
+    51     1.968768e-04     1.518628e-02         0.004546
+    52     1.424838e-04     3.796571e-03         0.004532
+    53     1.995271e-04     1.518628e-02         0.004491
+    54     1.342526e-04     3.796571e-03         0.004491
+    55     1.981819e-04     1.518628e-02         0.004543
+    56     1.259568e-04     3.796571e-03         0.004523
+    57     1.983570e-04     1.518628e-02         0.004514
+    58     1.175940e-04     3.796571e-03         0.004605
+    59     1.986120e-04     1.518628e-02         0.004500
+    60     1.091543e-04     3.796571e-03         0.004549
+    61     1.988164e-04     1.518628e-02         0.004564
+    62     1.006264e-04     3.796571e-03         0.004566
+    63     1.990215e-04     1.518628e-02         0.004572
+    64     9.199662e-05     3.796571e-03         0.004556
+    65     7.942205e-05     3.796569e-03         0.005676
+    66     8.723075e-05     9.491426e-04         0.006466
+    67     7.506891e-05     3.796569e-03         0.013560
+    68     1.671472e-04     1.518628e-02         0.004447
+    69     6.666615e-05     3.796571e-03         0.004513
+    70     6.134118e-05     9.491423e-04         0.026959
+    71     4.993158e-05     3.796569e-03         0.004495
+    72     5.647323e-05     9.491424e-04         0.004524
+    73     4.774481e-05     3.796569e-03         0.004460
+    74     5.160142e-05     9.491424e-04         0.004497
+    75     4.774434e-05     3.796569e-03         0.004525
+    76     4.672441e-05     9.491424e-04         0.004491
+    77     4.776050e-05     3.796569e-03         0.004516
+    78     4.183996e-05     9.491424e-04         0.004478
+    79     4.777700e-05     3.796569e-03         0.004560
+    80     3.694531e-05     9.491424e-04         0.004546
+    81     4.779397e-05     3.796569e-03         0.010174
+    82     3.203694e-05     9.491424e-04         0.004467
+    83     4.781135e-05     3.796569e-03         0.004468
+    84     2.711018e-05     9.491424e-04         0.004533
+    85     4.782923e-05     3.796569e-03         0.004495
+    86     2.215862e-05     9.491424e-04         0.004522
+    87     4.784747e-05     3.796569e-03         0.004530
+    88     1.717279e-05     9.491424e-04         0.004570
+    89     4.786617e-05     3.796569e-03         0.004516
+    90     1.213745e-05     9.491424e-04         0.004537
+    91     4.788529e-05     3.796569e-03         0.004460
+    92     8.099732e-06     9.491424e-04         0.004504
+    93     2.324556e-05     1.548719e-03         0.010003
+    94     2.321027e-06     7.302762e-05         0.004494
+    95     2.874307e-06     7.491447e-05         0.004516
+    96     1.822005e-08     1.764322e-10         0.004496
+    97     4.612005e-09     9.546275e-12         0.004514
+    98     3.765876e-12     3.580419e-13         0.004510
+pz0 = -10.103027162172838
+t1 = 1.6450509469600771
+t2 = 37.32398128558214
+t3 = 37.580773578617396
 tf = 42.713708753631714
-Norm of the shooting function: ‖s‖ = 3.977038221381455e-12</code></pre><p>Let us plot the solution from the indirect method. We can notice that the second bang arc is well captured by the indirect method compared to the direct method.</p><pre><code class="language-julia hljs"># concatenation of the flows with the switching times
+Norm of the shooting function: ‖s‖ = 4.292890575169657e-12</code></pre><p>Let us plot the solution from the indirect method. We can notice that the second bang arc is well captured by the indirect method compared to the direct method.</p><pre><code class="language-julia hljs"># concatenation of the flows with the switching times
 f = f1 * (t1, fs) * (t2, f1) * (t3, f0)
 
 # computation of the solution: state, costate, control
 indirect_sol = f((t0, tf), q0, [-1, pz0])
 
 # plot in the Bloch ball
-spin_plot(indirect_sol; size=(800, 400))</code></pre><img src="saturation-0574c9ae.svg" alt="Example block output"/><p>From the following plot, we can conclude that the maximisation condition from the PMP is now well satisfied compared to the solution obtained from the direct method.</p><pre><code class="language-julia hljs">plt = switching_plot(indirect_sol, H1, H01; size=(700, 800))
+spin_plot(indirect_sol; size=(800, 400))</code></pre><img src="saturation-5f05cf0c.svg" alt="Example block output"/><p>From the following plot, we can conclude that the maximisation condition from the PMP is now well satisfied compared to the solution obtained from the direct method.</p><pre><code class="language-julia hljs">plt = switching_plot(indirect_sol, H1, H01; size=(700, 800))
 lens!(plt, [37.2, 37.7], [    0, 4e-5], inset = (1, bbox(0.3, 0.2, 0.3, 0.4)))
 lens!(plt, [37.2, 37.7], [-5e-4, 5e-4], inset = (2, bbox(0.3, 0.3, 0.3, 0.4)))
-lens!(plt, [37.2, 37.7], [  0.5,  1.1], inset = (3, bbox(0.3, 0.2, 0.3, 0.4)))</code></pre><img src="saturation-1d50a956.svg" alt="Example block output"/><section class="footnotes is-size-7"><ul><li class="footnote" id="footnote-1"><a class="tag is-link" href="#citeref-1">1</a>B. Bonnard, O. Cots, S. Glaser, M. Lapert, D. Sugny &amp; Y. Zhang, *Geometric optimal control of the contrast imaging problem in nuclear magnetic resonance, IEEE Trans. Automat. Control, <strong>57</strong> (2012), no. 8, 1957–1969.</li><li class="footnote" id="footnote-2"><a class="tag is-link" href="#citeref-2">2</a>Bonnard, B.; Cots, O.; Rouot, J.; Verron, T. Time minimal saturation of a pair of spins and application in magnetic resonance imaging. Mathematical Control and Related Fields, 2020, 10 (1), pp.47-88. https://inria.hal.science/hal-01779377</li></ul></section></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="bloch-equation.html">« Bloch equation</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.15.0 on <span class="colophon-date" title="Wednesday 12 November 2025 18:10">Wednesday 12 November 2025</span>. Using Julia version 1.12.1.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+lens!(plt, [37.2, 37.7], [  0.5,  1.1], inset = (3, bbox(0.3, 0.2, 0.3, 0.4)))</code></pre><img src="saturation-d06d0182.svg" alt="Example block output"/><section class="footnotes is-size-7"><ul><li class="footnote" id="footnote-1"><a class="tag is-link" href="#citeref-1">1</a>B. Bonnard, O. Cots, S. Glaser, M. Lapert, D. Sugny &amp; Y. Zhang, *Geometric optimal control of the contrast imaging problem in nuclear magnetic resonance, IEEE Trans. Automat. Control, <strong>57</strong> (2012), no. 8, 1957–1969.</li><li class="footnote" id="footnote-2"><a class="tag is-link" href="#citeref-2">2</a>Bonnard, B.; Cots, O.; Rouot, J.; Verron, T. Time minimal saturation of a pair of spins and application in magnetic resonance imaging. Mathematical Control and Related Fields, 2020, 10 (1), pp.47-88. https://inria.hal.science/hal-01779377</li></ul></section></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="bloch-equation.html">« Bloch equation</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.17.0 on <span class="colophon-date" title="Sunday 12 April 2026 20:26">Sunday 12 April 2026</span>. Using Julia version 1.12.6.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
