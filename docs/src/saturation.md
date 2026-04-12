@@ -144,7 +144,7 @@ sol = solve(
     ocp; 
     grid_size=N, 
     init=(state=[-0.5, 0.0], ), 
-    disc_method=:gauss_legendre_2, 
+    scheme=:gauss_legendre_2, 
     print_level=4
 )
 nothing # hide
@@ -166,7 +166,7 @@ direct_sol = solve(
     ocp; 
     grid_size=N, 
     init=sol, 
-    disc_method=:gauss_legendre_2, 
+    scheme=:gauss_legendre_2, 
     print_level=4, 
     tol=1e-12
 )
